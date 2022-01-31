@@ -1,6 +1,8 @@
 import React from "react";
-import saturn from '../icono.pc.png';
-import './Menu.css'
+import saturn from '../../Assets/img/icono.pc.png';
+import './NavBar.css'
+import CartWidget from "../CartWidget/CartWidget";
+
 
 export default function Menu() {
     return(
@@ -34,7 +36,7 @@ export default function Menu() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contacto</a>
+              <CartWidget />
             </li>
           </ul>
         </div>
