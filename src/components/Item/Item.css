@@ -1,0 +1,20 @@
+.card{
+    border: 2px solid black;
+}
+
+.cardProducto{
+    max-width: 750px;
+    margin: auto;
+}
+
+.imgProd{
+    margin: 13.5px 16.5px;
+}
+
+.descripcion{
+    margin: 25px 0px;
+}
+
+.boton-info{
+    margin-left: 20px;
+}

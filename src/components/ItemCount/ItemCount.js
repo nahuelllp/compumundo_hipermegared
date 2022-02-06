@@ -32,6 +32,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
                 <h5> {itemCounter} </h5>
                 <button className="btn btn-success" onClick={agregarItem}> + </button>
             </div>
+            <p className="text-center">Stock: 8</p>
             <button className="btn btn-primary botonAgregarCarrito" onClick={agregarCarrito}> <h5>Agregar al carrito</h5> </button>
         </div>
     )
