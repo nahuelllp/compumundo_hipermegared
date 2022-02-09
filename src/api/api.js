@@ -14,6 +14,13 @@ const productos = [
         id: 2,
         titulo: 'Pc Gamer Intel',
         descripcion: 'Pc Armada Completa Intel I7 8700 8va Gen, Hd 1tb, Ddr4 4gb',
+        procesador: 'Intel Core i7 9na Generacion',
+        placaVideo: 'Intel HD graphics 630',
+        motherboard: 'MSI H310M',
+        disco: 'HHD 1TB',
+        memoriaRAM: '4GB 2400MHZ DDR4',
+        gabinete: 'ATX Sentley G28',
+        fuente: '500W',
         precio: 94999,
         "img": producto2,
     },
@@ -31,7 +38,7 @@ const promesaProductos = new Promise(function(resolve, reject) {
 
     setTimeout(function() {
         resolve(productos)
-    }, 2500)
+    }, 2300)
 
 });
 

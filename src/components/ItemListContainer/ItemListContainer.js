@@ -13,7 +13,6 @@ export default function ItemListContainer({ greeting }) {
 
     getProductos().then(function(productos){
 
-      console.log(productos)
       setProductos(productos)
 
     })
@@ -26,8 +25,8 @@ export default function ItemListContainer({ greeting }) {
 
   return (
     <div>
-      <p className="ItemListTitulo animated flash text-center"> {greeting} </p>
-      { productos.length > 0 ? <ItemList productos={productos} /> : <p className="tituloCargando text-center"> Cargando productos...</p>}
+      <p className="ItemListTitulo text-center"> {greeting} </p>
+      { productos.length > 0 ? <ItemList productos={productos} /> : <p className="tituloCargando text-center animated flash"> Cargando productos...</p>}
       <ItemCount stock={8} initial={0} onAdd={onAddItem} />
     </div>
   )

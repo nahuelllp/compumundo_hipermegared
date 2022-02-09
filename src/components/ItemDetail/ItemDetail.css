@@ -1,0 +1,20 @@
+.cardDetail{
+    margin-top:  75px;
+    border: 2px solid darkblue;
+}
+
+.card-bg{
+    background-color: rgb(235, 235, 222);
+}
+
+.imgeffect:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.imgProductoDetail{
+    margin: 82.5px 16.5px;
+}
+ .btnDetail{
+     margin-top: 10px;
+ }
