@@ -1,21 +1,20 @@
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useEffect, useState } from "react";
 import { getProductos } from "../../api/api";
+import { useParams } from 'react-router-dom';
 
 
 export default function ItemDetailContainer() {
 
     const [item, setItem] = useState()
+    const { itemId} = useParams();
 
-    useEffect(() => {        
-
+    useEffect(() => {
         getProductos().then((items) =>{
-            const item = items.find((item) => item.id === 2)
-            setItem(item)
-
-        })
-        
-    }, []);
+            const item = items.find((i) => i.id.toString() === itemId)
+        setItem(item)
+        })        
+    }, [itemId]);
 
 
     return (

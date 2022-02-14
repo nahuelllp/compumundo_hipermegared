@@ -22,7 +22,14 @@
 .navbar-brand{
 	padding-left: 75px;
 }
+
+.container-fluid a{
+	color: black;
+	text-decoration: none;
+}
   
 .tituloNav{
 	padding-top: 20px;
+	color: black;
+	text-decoration: none;
 }
