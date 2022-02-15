@@ -35,7 +35,6 @@ export default function ItemListContainer({ greeting }) {
     <div>
       <p className="ItemListTitulo text-center"> {greeting} </p>
       { productos.length > 0 ? <ItemList productos={productos} /> : <p className="tituloCargando text-center animated flash"> Cargando productos...</p>}
-      <ItemCount stock={8} initial={0} onAdd={onAddItem} />
     </div>
   )
 }

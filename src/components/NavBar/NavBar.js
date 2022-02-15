@@ -22,12 +22,12 @@ export default function Menu() {
           <ul className="navbar-nav ms-auto">        
             <li className="nav-item">
               <NavLink to="/">
-              <a className="nav-link" aria-current="page" href="#">Home</a>
+              <span className="nav-link" aria-current="page" href="#">Home</span>
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to ="/categoria/computadoras">
-                <a className="nav-link" href="#">Computadoras</a>
+                <span className="nav-link" href="#">Computadoras</span>
               </NavLink>
             </li>
             <li className="nav-item dropdown">
@@ -37,26 +37,28 @@ export default function Menu() {
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li>
                   <NavLink to="/categoria/procesadores">
-                <a className="dropdown-item text-center">Procesadores</a>
+                <span className="dropdown-item text-center">Procesadores</span>
                 </NavLink>
                 </li>
                 <li>
                   <NavLink to="/categoria/placasVideo">
-                    <a className="dropdown-item text-center" href="#">Placas de video</a>
+                    <span className="dropdown-item text-center" href="#">Placas de video</span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/categoria/motherboards">
-                    <a className="dropdown-item text-center" href="#">Motherboards</a>
+                    <span className="dropdown-item text-center" href="#">Motherboards</span>
                   </NavLink></li>
                 <li>
                   <NavLink to="/categoria/memorias">
-                    <a className="dropdown-item text-center" href="#">Memorias</a>
+                    <span className="dropdown-item text-center" href="#">Memorias</span>
                   </NavLink></li>
               </ul>
             </li>
             <li className="nav-item">
-              <CartWidget />
+              <NavLink to="/cart">
+                <CartWidget />
+              </NavLink>
             </li>
           </ul>
         </div>

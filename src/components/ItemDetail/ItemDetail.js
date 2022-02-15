@@ -1,6 +1,19 @@
+import { useState } from 'react'
+import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
+import { Link } from 'react-router-dom'
 
 export default function ItemDetail( { item }) {
+
+    const [itemAmount, setItemAmount] = useState();
+
+    function onAddItem(newItemCount) {
+        console.log(newItemCount)
+        setItemAmount(newItemCount);
+
+    }
+
+
 
     return (
 
@@ -20,7 +33,13 @@ export default function ItemDetail( { item }) {
                         <h5 className="card-text">Gabinete: {item.gabinete} </h5>
                         <h5 className="card-text">Fuente: {item.fuente} </h5>
                         <h5 className="card-text">Precio: ${item.precio} </h5>
-                        <button className='btn btn-info btnDetail'>Comprar</button>
+
+                        {
+                            !itemAmount ?
+                            <ItemCount stock={8} initial={1} onAdd={onAddItem} /> :
+                            <Link to="/cart"><button className='btn btn-success'>Ir al carrito</button></Link>
+                        }
+
                     </div>
                 </div>
             </div>
