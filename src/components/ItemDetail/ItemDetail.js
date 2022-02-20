@@ -1,17 +1,20 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../Cart/CartContext';
 
-export default function ItemDetail( { item }) {
+export default function ItemDetail( { item } ) {
 
-    const [itemAmount, setItemAmount] = useState();
+    const [showButton, setShowButton] = useState(false);
+    const {addToCart, cart} = useContext(CartContext) //importo el hook y el nombre del contexto
 
-    function onAddItem(newItemCount) {
-        console.log(newItemCount)
-        setItemAmount(newItemCount);
-
+    function onAddItem(cantidad) {
+        //console.log(newItemCount)
+        setShowButton(true);
+        addToCart(cantidad, item);
     }
+
 
 
 
@@ -35,7 +38,7 @@ export default function ItemDetail( { item }) {
                         <h5 className="card-text">Precio: ${item.precio} </h5>
 
                         {
-                            !itemAmount ?
+                            !showButton ?
                             <ItemCount stock={8} initial={1} onAdd={onAddItem} /> :
                             <Link to="/cart"><button className='btn btn-success'>Ir al carrito</button></Link>
                         }

@@ -1,0 +1,17 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+.cart-titulo{
+    font-size: 40px;
+    margin: 20px 0px;
+}
+
+.cart-subtitulo{
+    color: red;
+    text-decoration: underline;
+}
+
+.botonTrash{
+    margin: 10px;
+}
