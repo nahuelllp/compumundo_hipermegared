@@ -2,8 +2,7 @@ import React from "react";
 import saturn from '../../Assets/img/icono.pc.png';
 import './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget";
-import { Link } from 'react-router-dom'
-import { NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 export default function Menu() {
@@ -21,44 +20,44 @@ export default function Menu() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">        
             <li className="nav-item">
-              <NavLink to="/">
-              <span className="nav-link" aria-current="page" href="#">Home</span>
-              </NavLink>
+              <Link to="/">
+              <span className="nav-link" aria-current="page">Home</span>
+              </Link>
             </li>
             <li className="nav-item">
-              <NavLink to ="/categoria/computadoras">
-                <span className="nav-link" href="#">Computadoras</span>
-              </NavLink>
+              <Link to ="/categoria/computadoras">
+                <span className="nav-link">Computadoras</span>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Productos 
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li>
-                  <NavLink to="/categoria/procesadores">
+                  <Link to="/categoria/procesadores">
                 <span className="dropdown-item text-center">Procesadores</span>
-                </NavLink>
+                </Link>
                 </li>
                 <li>
-                  <NavLink to="/categoria/placasVideo">
-                    <span className="dropdown-item text-center" href="#">Placas de video</span>
-                  </NavLink>
+                  <Link to="/categoria/placasVideo">
+                    <span className="dropdown-item text-center">Placas de video</span>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink to="/categoria/motherboards">
-                    <span className="dropdown-item text-center" href="#">Motherboards</span>
-                  </NavLink></li>
+                  <Link to="/categoria/motherboards">
+                    <span className="dropdown-item text-center">Motherboards</span>
+                  </Link></li>
                 <li>
-                  <NavLink to="/categoria/memorias">
-                    <span className="dropdown-item text-center" href="#">Memorias</span>
-                  </NavLink></li>
+                  <Link to="/categoria/memorias">
+                    <span className="dropdown-item text-center">Memorias</span>
+                  </Link></li>
               </ul>
             </li>
             <li className="nav-item">
-              <NavLink to="/cart">
+              <Link to="/cart">
                 <CartWidget />
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>

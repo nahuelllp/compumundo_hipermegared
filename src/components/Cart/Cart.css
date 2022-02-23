@@ -15,3 +15,10 @@
 .botonTrash{
     margin: 10px;
 }
+
+.producto_cart{
+    margin-left: 50px;
+    margin-bottom: 5px;
+    border: 3px solid red;
+    border-radius: 15px;
+}

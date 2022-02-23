@@ -40,7 +40,7 @@ export default function ItemDetail( { item } ) {
                         {
                             !showButton ?
                             <ItemCount stock={8} initial={1} onAdd={onAddItem} /> :
-                            <Link to="/cart"><button className='btn btn-success'>Ir al carrito</button></Link>
+                            <Link to="/cart"><button className='btn btn-success'>Finalizar compra</button></Link>
                         }
 
                     </div>
