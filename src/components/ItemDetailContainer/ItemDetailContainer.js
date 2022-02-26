@@ -1,7 +1,8 @@
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useEffect, useState } from "react";
-import { getProductos } from "../../api/api";
 import { useParams } from 'react-router-dom';
+import { doc, getDoc} from 'firebase/firestore'
+import { dataBase } from '../../firebase';
 
 
 export default function ItemDetailContainer() {
@@ -10,10 +11,14 @@ export default function ItemDetailContainer() {
     const { itemId} = useParams();
 
     useEffect(() => {
-        getProductos().then((items) =>{
-            const item = items.find((i) => i.id.toString() === itemId)
-        setItem(item)
-        })        
+        const itemRef = doc(dataBase, "items", itemId);
+        getDoc(itemRef).then((snapshot) => {
+            if(snapshot.exists()) {
+                setItem({ id: snapshot.id, ...snapshot.data()})
+            }
+        }).catch(error => {
+            console.log(error)
+        })  
     }, [itemId]);
 
 

@@ -5,6 +5,8 @@ import imgproducto4 from '../Assets/img/procesador190x180.png';
 import imgproducto5 from '../Assets/img/placazotac.png'
 import imgproducto6 from '../Assets/img/mother_asrock.png';
 import imgproducto7 from '../Assets/img/memoria_OLOY_8gb.png'
+import { getDocs, collection } from 'firebase/firestore'
+import { dataBase } from '../firebase';
 
 
 const productos = [
@@ -12,7 +14,7 @@ const productos = [
         id: 1,
         titulo: 'Pc de oficina Lenovo',
         descripcion: 'Pc Lenovo V50s, Intel Core I3 10100, Ram 8gb, Ssd 240gb',
-        procesador: 'Intel Core i3 10100.',
+        procesador: 'Intel Core i3 10100',
         placaVideo: 'No posee.',
         motherboard: 'ASUS H310M',
         disco: 'SSD 240 GB',
@@ -45,8 +47,8 @@ const productos = [
         procesador: 'AMD Ryzen 5 2600',
         placaVideo: 'Nvidia GeForce GTX 1050 Ti 4GB',
         motherboard: 'MSI A320',
-        disco: '8GB 2666MHZ DDR4',
-        memoriaRAM: 'HHD 1TB',
+        disco: 'HDD 1TB',
+        memoriaRAM: '8GB 2666MHZ DDR4',
         gabinete: 'Sentley medium tower X10 RGB',
         fuente: 'Sentley SNP 550W',
         precio: 169999,
@@ -90,9 +92,16 @@ const productos = [
 
 const promesaProductos = new Promise(function(resolve, reject) {
 
-    setTimeout(function() {
-        resolve(productos)
-    }, 2300)
+    getDocs(collection(dataBase, "items")).then(snapshot => {
+        const products = snapshot.docs.map( (doc) => ({
+          id: doc.id, ...doc.data()
+        }))
+        resolve(products)
+        console.log(products)
+      }).catch(error => {
+        console.log(error)
+        reject(error)
+      })
 
 });
 
