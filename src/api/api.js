@@ -1,13 +1,6 @@
-import imgproducto1 from '../Assets/img/producto1.png';
-import imgproducto2 from '../Assets/img/producto2.png';
-import imgproducto3 from '../Assets/img/producto3.png';
-import imgproducto4 from '../Assets/img/procesador190x180.png';
-import imgproducto5 from '../Assets/img/placazotac.png'
-import imgproducto6 from '../Assets/img/mother_asrock.png';
-import imgproducto7 from '../Assets/img/memoria_OLOY_8gb.png'
 import { getDocs, collection } from 'firebase/firestore'
 import { dataBase } from '../firebase';
-
+/*
 
 const productos = [
     {
@@ -87,7 +80,7 @@ const productos = [
         "img": imgproducto7,
         categoria: 'memorias',
     }
-]
+]*/
 
 
 const promesaProductos = new Promise(function(resolve, reject) {

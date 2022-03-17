@@ -8,13 +8,14 @@
 }
 
 .imgeffect:hover{
-    transform: scale(1.1);
+    transform: scale(1.15);
     transition: 1s;
 }
 
 .imgProductoDetail{
     margin: 82.5px 16.5px;
 }
- .btnDetail{
+
+.btnDetail{
      margin-top: 10px;
  }

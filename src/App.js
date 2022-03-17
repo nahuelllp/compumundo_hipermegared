@@ -25,7 +25,7 @@ function App() {
               />
 
               <Route path="/categoria/:nombreCategoria"
-              element={<ItemListContainer greeting="Productos disponibles" />}
+              element={<ItemListContainer greeting="PRODUCTOS DISPONIBLES" />}
               />
 
               <Route

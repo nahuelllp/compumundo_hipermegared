@@ -8,7 +8,7 @@ import { Link, NavLink } from 'react-router-dom'
 export default function Menu() {
     return(
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-light col-lg-12">
+      <nav className="navbar navbar-expand-lg navbar-light bg-nav col-lg-12">
       <div className="container-fluid">
         <Link to="/">
         <img className="navbar-brand" src={saturn} alt="logo" />

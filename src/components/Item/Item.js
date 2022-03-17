@@ -11,7 +11,7 @@ export default function Item( {item} ) {
             <div className="col-md-4">
                 <img src={item.img} className="img-fluid rounded-start imgProd" alt="Imagen de producto" />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-8 card-bg">
                 <div className="card-body">
                     <h3 className="card-title">{item.titulo}</h3>
                     <h5 className="card-text descripcion">{item.descripcion} </h5>

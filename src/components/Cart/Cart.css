@@ -1,6 +1,8 @@
 *{
     list-style: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 .cart-titulo{
     font-size: 40px;
@@ -17,8 +19,10 @@
 }
 
 .producto_cart{
-    margin-left: 50px;
-    margin-bottom: 5px;
+    margin: auto;
+    margin-bottom: 15px;/*
     border: 3px solid red;
-    border-radius: 15px;
+    border-radius: 15px;*/
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
