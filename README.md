@@ -21,6 +21,6 @@
     + Brand y navbar funcionando con links a las respectivas secciones.
     + Mostrar detalle de cada producto con su respectivo ID en la url.
     + Categorias de productos.
-    +Carrito y checkout completamente funcional.
+    + Carrito y checkout completamente funcional.
     
-![VideoGif](public/Proyecto.gif)
+![VideoGif](public/proyecto.gif)
