@@ -2,6 +2,7 @@ import { addDoc, collection } from "firebase/firestore";
 import React, { useContext, useState } from "react";
 import { dataBase } from "../../firebase";
 import { CartContext } from "../Cart/CartContext";
+import './CheckoutForm.css';
 
 
 const CartCheckout = () => {
@@ -33,29 +34,29 @@ const CartCheckout = () => {
     };
 
     if (orderId !== '') {
-        return <h2>Este es el Id de tu orden de compra: {orderId}</h2>
+        return <h2 className="orderTitle">Este es el Id de tu orden de compra: <span className="orderId">{orderId}</span></h2>
     }
     return (
         <>
-            <div>
-                <h2>Finaliza tu compra acá bb</h2>
+            <div className="col-10">
+                <h4 className="formTitle">Introduce tus datos para finalizar la compra:</h4>
                 <form
                     onSubmit={handleSubmit}
                     action=""
                 >
-                    <input 
+                    <input className="inputMargin"
                         onChange={(e) => setNombre(e.target.value)}    
                         value={nombre}
                         type="text"
                         placeholder="Nombre"
-                    />
-                    <input
+                    /><br></br>
+                    <input className="inputMargin"
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                         type="email"
                         placeholder="Email"
-                    />
-                    <button
+                    /><br></br>
+                    <button className="btn btn-primary checkoutButton"
                         disabled={(nombre === '') | (email === '')}
                     >
                         {loading

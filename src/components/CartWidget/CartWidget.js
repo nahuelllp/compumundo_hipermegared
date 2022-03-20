@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import carrito from '../../Assets/img/cart.png';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../Cart/CartContext'
+import { CartContext } from '../Cart/CartContext';
 
 export default function CartWidget() {
 

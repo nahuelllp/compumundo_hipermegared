@@ -4,25 +4,54 @@
     margin: 0;
     padding: 0;
 }
-.cart-titulo{
+.emptyCartTitle{
     font-size: 40px;
     margin: 20px 0px;
 }
 
-.cart-subtitulo{
+.linkToShop{
     color: red;
     text-decoration: underline;
 }
 
-.botonTrash{
-    margin: 10px;
+.cartTitle{
+    color: rgb(29, 25, 78);
+    font-size: 40px;
+    font-weight: 600;
+    margin: 20px 10px 15px 100px;
 }
 
-.producto_cart{
+.cartRow{
+    margin-left: 100px;
+}
+
+.productCard{
     margin: auto;
-    margin-bottom: 15px;/*
-    border: 3px solid red;
-    border-radius: 15px;*/
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    margin-bottom: 15px;
+    border-top: 2px dashed black;
+    border-bottom: 2px dashed black;
+}
+
+.productCardDetail{
+    margin-left: 20px;
+}
+
+.trashButton{
+    margin: 10px 0px 10px 20px;
+}
+
+.productFinalAmount{
+    margin-left: 110px;
+}
+
+.totalPriceTitle{
+    margin-left: 110px;
+}
+
+.emptyCartButton{
+    margin-left: 110px;
+}
+
+.productSubtitle{
+    text-decoration: underline;
 }

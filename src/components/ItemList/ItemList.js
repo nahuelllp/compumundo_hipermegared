@@ -1,5 +1,5 @@
-import './ItemList.css'
-import Item from '../Item/Item.js'
+import './ItemList.css';
+import Item from '../Item/Item.js';
 
 export default function ItemList( {productos}) {
 

@@ -1,6 +1,13 @@
 # Ecommerce de Computadoras y sus componentes
 
-# Las fotos están tomadas de diferentes sitios por eso la clara diferencia en su proporcion(es lo primero que debo arreglar)
+# Librerias utilizadas:
+
+    Bootstrap 5.1.
+    React.
+    React-dom.
+    React-router-dom.
+    Firebase.
+    React-script.
 
 
 # Para contacto:
@@ -11,8 +18,9 @@
 
 # Dejo GIF donde se puede ver el estado actual del proyecto, para apreciar:
 
-    + Brand y navbar funcionando con links a las respectivas secciones
-    + Mostrar detalle de productos con su ID
-    + Categorias de productos
+    + Brand y navbar funcionando con links a las respectivas secciones.
+    + Mostrar detalle de cada producto con su respectivo ID en la url.
+    + Categorias de productos.
+    +Carrito y checkout completamente funcional.
     
-![VideoGif](public/proyecto.gif)
+![VideoGif](public/Proyecto.gif)

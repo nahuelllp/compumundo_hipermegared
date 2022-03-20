@@ -1,0 +1,24 @@
+.formTitle{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.inputMargin{
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+
+.checkoutButton{
+    margin-top: 10px;
+    margin-left: 225px;
+}
+
+.orderTitle{
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+.orderId{
+    color: blueviolet;
+}

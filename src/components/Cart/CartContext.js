@@ -1,31 +1,27 @@
 import { createContext, useState } from "react"
 
-export const CartContext = createContext([]) //creo el context
+export const CartContext = createContext([]) 
 
 const CartContextProvider = ({children}) => {
 
     const [cart, setCart] = useState([]);
 
-    //agrega items al carrito
     const addToCart = (cantidad, item) => {
         let producto = isOnCart(item.id)
-        console.log(producto)
         if (producto) {
 
             const cartAux = [...cart]
             cartAux.forEach((i) =>{
-                if(i.id == item.id){
+                if(i.id === item.id){
                     i.cantidad = i.cantidad + cantidad;
                 }
             })
             setCart(cartAux)
         } else {
-            setCart([...cart, {...item, cantidad}]); //si no está, lo agrego
+            setCart([...cart, {...item, cantidad}]);
         }        
     }
 
-
-    console.log(cart)
 
     const isOnCart = (id) =>{
         const alerta = cart.some((item) => item.id === id)
@@ -33,12 +29,12 @@ const CartContextProvider = ({children}) => {
     }
 
 
-    const limpiarCarrito = () => {  //funcion para limpiar todo el carrito
+    const limpiarCarrito = () => {
         setCart([])
     }
 
-    const eliminarItem = (id) => {  //funcion para eliminar solo un item del carrito
-        setCart(cart.filter(item => item.id != id))
+    const eliminarItem = (id) => {
+        setCart(cart.filter(item => item.id !== id))
     }
 
     const getCantidadTotal = () => {

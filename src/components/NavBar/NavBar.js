@@ -1,8 +1,8 @@
 import React from "react";
-import saturn from '../../Assets/img/icono.pc.png';
-import './NavBar.css'
+import logo from '../../Assets/img/icono.pc.png';
+import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 export default function Menu() {
@@ -11,7 +11,7 @@ export default function Menu() {
       <nav className="navbar navbar-expand-lg navbar-light bg-nav col-lg-12">
       <div className="container-fluid">
         <Link to="/">
-        <img className="navbar-brand" src={saturn} alt="logo" />
+        <img className="navbar-brand" src={logo} alt="logo" />
         <span>COMPUMUNDO HIPERMEGARED</span>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

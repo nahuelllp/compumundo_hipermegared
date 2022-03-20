@@ -1,16 +1,15 @@
-import { useContext, useState } from 'react'
+import { useContext, useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
-import './ItemDetail.css'
-import { Link } from 'react-router-dom'
+import './ItemDetail.css';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../Cart/CartContext';
 
 export default function ItemDetail( { item } ) {
 
     const [showButton, setShowButton] = useState(false);
-    const {addToCart, cart} = useContext(CartContext) //importo el hook y el nombre del contexto
+    const {addToCart} = useContext(CartContext);
 
     function onAddItem(cantidad) {
-        //console.log(newItemCount)
         setShowButton(true);
         addToCart(cantidad, item)
     }
